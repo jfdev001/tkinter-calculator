@@ -37,18 +37,18 @@ def parse_expression(expr):
     expression_list = list()  # Stores infix int & str math expression
     operator_list = ["+", "-", "*", "/"]
     index = 0     # For iterating through str expression 
-    num = ""      # Str which will be converted to int
+    num = ""      # Str which will be converted to float
     # Build expression_list
     while (index < len(expr)):
             if (expr[index] not in operator_list):
                 num += expr[index]
             elif (expr[index] in operator_list):
-                expression_list.append(int(num))
+                expression_list.append(float(num))
                 num = "" 
                 expression_list.append(expr[index])
 
             if (index == len(expr)-1):
-                expression_list.append(int(num))
+                expression_list.append(float(num))
 
             index += 1    # Recurring operation
     return expression_list
