@@ -1,2 +1,2 @@
 Simple calculator created using Tkinter
-![] (demo.gif)
+! [] (demo.gif)
