@@ -20,8 +20,6 @@ from functools import partial
 # Functions
 def button_click(operand):
     """Insert args to Entry widget then eval if '='"""
-    
-    
     if (operand == "Clear"): # Clear the entry field
         expr.delete(0, END)
     elif (operand == "="):   # Calculate and display result
@@ -35,9 +33,7 @@ def button_click(operand):
 
 
 def parse_expression(expr):
-    """Convert expr to int list then calculate based on PEMDAS"""
-    
-    
+    """Convert expr to int list then calculate based on PEMDAS"""    
     expression_list = list()  # Stores infix int & str math expression
     operator_list = ["+", "-", "*", "/"]
     index = 0     # For iterating through str expression 
@@ -59,9 +55,7 @@ def parse_expression(expr):
 
 
 def parse_calculation(expression_list):
-    """Calculate result based on PE(MDAS) ignoring P & E."""
-    
-    
+    """Calculate result based on PE(MDAS) ignoring P & E."""    
     has_operands = True
     # Search for indices of operands in MDAS and update expression_list
     while(has_operands):
